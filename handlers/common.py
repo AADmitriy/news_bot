@@ -24,7 +24,7 @@ website = {
                 'main': 'div.article_news_bold'},
     'time': 'div.article_time',
     'text': 'div.article_header a',
-    'href': 'div.article_header a'
+    'href': 'div.article_link a'
 }
 
 logging.info(website['site'] + website['page'])
@@ -57,6 +57,7 @@ def parse(mode: int):
     result_str = ''
     for article in site_data:
         text = article[1]
+        # if article has no text, it won't be added to result
         if not text:
             continue
 
