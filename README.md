@@ -10,16 +10,16 @@ Simple, customizable bot for scraping news sites
 
 ## Installation
 
-Create directory of your choice, let's say '/somedir/example' . Inside in create virtual enviroment 
+Create directory of your choice, let's say `/somedir/example` . Inside in create virtual enviroment 
 and copy this repository.
 
-Than download requirements to venv by activating it and running 'pip install -r requirements.txt'.
+Than download requirements to venv by activating it and running `pip install -r requirements.txt`.
 
-Grab '.env_example' file rename it to '.env'. Open it and set your own bot_token.
+Grab `.env_example` file rename it to `.env`. Open it and set your own bot_token.
 
-Go to 'handlers/common.py' file and change website dict, setting your own selectors.
+Go to `handlers/common.py` file and change website dict, setting your own selectors.
 
-Finally, go the dir with bot.py and start your bot with 'py bot.py' command.
+Finally, go the dir with bot.py and start your bot with `py bot.py` command.
 
 
 
