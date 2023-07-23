@@ -24,4 +24,4 @@ Finally, go the dir with bot.py and start your bot with `py bot.py` command.
 
 
 ### Please, be careful, if bot would have a lot of users it could possibly overload server causing some material loss to the site owner.
-### Created in educational purpose for real news bot better to use API
+### Created in educational purpose for creating real news bot better to use API
