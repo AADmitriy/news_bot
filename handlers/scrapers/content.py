@@ -1,3 +1,11 @@
+""" # imports for using selenium
+from selenium.webdriver.chrome import service, options, webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+"""
+
 import requests
 from bs4 import BeautifulSoup
 import re
@@ -35,6 +43,31 @@ class Content:
             return None
 
         return BeautifulSoup(req.text, 'html.parser')
+
+    """
+    def get_page(self):
+        chrome_options = options.Options()
+        chrome_options.add_argument('--headless')  # this enables selenium run in the background
+        chrome_options.add_argument('--log-level=3')  # this reduces the number of log messages
+
+        # here you should set your own path to chromedriver executable
+        chrome_service = service.Service(executable_path="C:/chromedriver/chromedriver.exe")
+
+        # creates driver and loads page in the current browser version
+        driver = webdriver.WebDriver(options=chrome_options, service=chrome_service)
+        driver.get(self.site_url + self.page_url)
+
+        try:
+            WebDriverWait(driver, 10).until(  # wait for 10 sec until tag with article appear
+                EC.presence_of_element_located((By.CSS_SELECTOR, self.article_selector)))
+        except TimeoutException:
+            return None
+        finally:
+            page_source = driver.page_source  # gets source of page
+            driver.close()
+
+        return BeautifulSoup(page_source, 'html.parser')
+    """
 
     def safe_get(self, page_obj, selector: str, mode: int):
         """
