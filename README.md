@@ -25,3 +25,17 @@ Finally, go the dir with bot.py and start your bot with `py bot.py` command.
 
 ### Please, be careful, if bot would have a lot of users it could possibly overload server causing some material loss to the site owner.
 ### Created in educational purpose for creating real news bot better to use API
+
+## Selenium get_page
+
+To scrape dynamically generated sites it is better to use selenium function.
+
+You can enable it, by uncommenting selenium imports and function `get_page`, that uses it.
+
+Set your own path to chromedriver executable in that function `chrome_service`.
+
+Also comment out another `get_page` function that uses requests.
+
+Finally, install selenium by running in venv `pip install selenium==4.11.2`.
+
+#### Know that selenium is much slower, than function that based on requests.
